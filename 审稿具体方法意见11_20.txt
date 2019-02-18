@@ -1,0 +1,91 @@
+﻿.LOG
+
+# 审稿意见规范
+
+老师说到的问题，记得都要写到。
+
+审稿意见包括三个部分：
+
+## 第一个部分，对文章的总结。
+summary:
+3-5句话，看懂这个论文写了什么事情。
+做了什么，结果怎么样。
+主要去参考文章的摘要，引言和结论部分。
+如果不清楚，就可以写描述的不清楚。
+
+## 第二个部分，总结优点：
+strong points：
+按他写的贡献来写，
+解决的问题有趣
+提出的框架有趣
+若真实数据集上做了实验，实验结果表明了对比算法之间的优势
+
+## *第三个部分，总结缺点*：
+weak points:
+审稿人总是要挑出问题：
+### 1： 提出的方法没有创新性，并给出理由，
+提出的算法只是简单应用了什么样的算法，虽然提出了新的方法，
+但是，主要应用了他人的方法。
+The technological innovation of the proposed method is limited. 
+
+Reason.
+
+### 2： 实验方面
+问题：缺实验，缺baseline，实验效果不好，效率的评估等2到3条。
+The improvement is not significant.
+
+Reason.
+
+### 3： 如果缺少重要baseline
+明确的告知缺少什么文献，要以参考文献的形式告知。
+
+Some important baselines are missing. 
+Must specify the baseline proposed in detailed paper.
+
+### 4： 论文的描述的不够清晰，公式缺失，数据设置不清楚，
+问题不清楚
+
+The presentation of the paper is unclear.
+   (1) problem definition
+   (2) method description 
+   (3) experimental setup
+
+*以上缺点具有2-3个以上必须大修或者拒掉*
+-------
+附加点：
+### 5： 缺少参考文献
+必须提供相应的参考文献
+Some related work is missing. For example, xxx
+
+### 6： 语法错误等
+There are lots of gramma errors and typos. For example, xxx
+
+
+-------
+### 示例1：
+1.The technological innovation of this paper is limited.  The method used in this paper is very simple. They only apply the existing method into taxi-passenger demand prediction. 
+2.Experimental evaluation is very weak. There are lots of works that focus on the taxi demand prediction in recent top conferences. These works should be discussed in related work and compared in experimental evaluation. For example, 
+
+Huaxiu Yao, Fei Wu, Jintao Ke, Xianfeng Tang, Yitian Jia, Siyu Lu, Pinghua Gong, Jieping Ye, Zhenhui Li. Deep Multi-View Spatial-Temporal Network for Taxi Demand Prediction, in Proceeding of the Thirty-Second AAAI Conference on Artificial Intelligence (AAAI 2018), New Orleans, LA, Feb. 2018
+Zhang, Junbo, Yu Zheng, and Dekang Qi. "Deep Spatio-Temporal Residual Networks for Citywide Crowd Flows Prediction." In AAAI, pp. 1655-1661. 2017.
+In addition, comprehensive effectiveness and efficiency evaluation should be required.  
+All in all, the paper is still far from the level of SDM conference.
+
+### 示例2：
+1. The technical contribution is limited. The authors only combine some information by several embedding layers. 
+2. In next location prediction, there are a lot of baselines should be compared. For example,
+[1]	Feng, Jie, et al. "DeepMove: Predicting Human Mobility with Attentional Recurrent Networks." Proceedings of the 2018 World Wide Web Conference on World Wide Web. International World Wide Web Conferences Steering Committee, 2018.
+[2]	Du, Nan, et al. "Recurrent marked temporal point processes: Embedding event history to vector." Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining. ACM, 2016.
+[3]	Qiang Liu, Shu Wu, Liang Wang, and Tieniu Tan. 2016. Predicting the next location: a recurrent model with spatial and temporal contexts. In Thirtieth AAAI Conference on Artificial Intelligence. 194–200.
+
+Especially, [2] also uses NYC taxi dataset.
+
+3. The model formulation of this paper is not clear. It is better to use more equations to formulate the model. For example, the formulation of function f. In addition, in section 3.3, the optimization method is back propagation, not BPTT.
+4. It is better to add some ablation study to show the effectiveness of each component/feature. For example, only use D, Z to predict the next destination.
+5. The related work part should be revised. Graph embedding is not related to this paper.  
+6. Minor comments:
+	In Figure 2, T is T_n, O is O_n.
+	In section 3.3, there are N_r events. Thus, e_N should be e_{N_r} or e_{|N_r|}.
+
+
+21:30 2018/11/20
